@@ -1,12 +1,11 @@
 import Book from './Book';
 import { useBookDetail } from '../../hooks/useBookDetail';
 import { useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function BookDetail() {
-  const id = useParams();
-  console.log('1', id);
+  const { id } = useParams();
   const { book, loading, error } = useBookDetail(id);
-  console.log('3', book);
   if (error)
     return (
       <>
@@ -16,7 +15,13 @@ function BookDetail() {
 
   if (loading) return <h3>Loading book...</h3>;
 
-  return <Book book={book} showDetail />;
+  return (
+    <>
+      <h1>Library Catalog</h1>
+      <h4><Link to="/booklist">Return to Catalog</Link></h4>
+      <Book book={book} showDetail />
+    </>
+  );
 }
 
 export default BookDetail;

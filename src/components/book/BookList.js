@@ -13,6 +13,7 @@ function BookList() {
   if (loading) return <h1>Loading books...</h1>;
   return (
     <>
+      <h1>Library Catalog</h1>
       <h3><Link to="/" className='home' >Return Home</Link></h3>
       <ul className="book-list" aria-label="book list">
         {books.map((book) => (
