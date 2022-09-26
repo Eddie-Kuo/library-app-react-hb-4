@@ -18,7 +18,7 @@ function BookDetail() {
   return (
     <>
       <h1>Library Catalog</h1>
-      <h4><Link to="/booklist">Return to Catalog</Link></h4>
+      <h4><Link to="/booklist" className='home'>Return to Catalog</Link></h4>
       <Book book={book} showDetail />
     </>
   );
