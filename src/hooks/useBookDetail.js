@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { getBookById } from '../services/books';
 
 export function useBookDetail({ id }) {
-  const [book, setBook] = useState();
+  const [book, setBook] = useState({});
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(true);
 
@@ -10,6 +10,7 @@ export function useBookDetail({ id }) {
     const fetchData = async () => {
       try {
         const data = await getBookById(id);
+        console.log('2', data);
         setBook(data);
         setLoading(false);
       } catch (e) {

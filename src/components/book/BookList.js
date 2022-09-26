@@ -7,7 +7,7 @@ function BookList() {
   if (error)
     return (
       <>
-        <h1>Something went wrong :(</h1> <h2>{error}</h2>
+        <h1>Something went wrong :</h1> <h2>{error}</h2>
       </>
     );
   if (loading) return <h1>Loading books...</h1>;
