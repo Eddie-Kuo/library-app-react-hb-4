@@ -13,3 +13,4 @@ export async function getBookById(id) {
   const resp = await client.from('books').select(`*, authors (*)`).match({ book_id: id }).single();
   return checkError(resp);
 }
+

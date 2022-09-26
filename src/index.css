@@ -3,7 +3,7 @@ body {
   font-family: Consolas, 'Courier New', monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: rgb(0, 255, 21);
+  color: lightcyan;
   background-color: black;
   padding: 1rem 2rem;
 }
